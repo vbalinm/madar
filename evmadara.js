@@ -37,16 +37,17 @@ evmadara[2013] = "gyurgyalag";
 evmadara[2014] = "túzok";
 evmadara[2015] = "búbos banka";
 
-function frissit(){
+function frissit() {
     var ev = document.getElementById('ev').value;
     evszam.innerHTML = ev;
-    madar.innerHTML = evmadara[ev];
+    madar.innerHTML = nagyKezdo(evmadara[ev]);
 }
 
-function nagyKezdo(szoveg){
+function nagyKezdo(szoveg) {
     return szoveg.charAt(0).toUpperCase() + szoveg.slice(1);
 }
 
-function veletlen(){
-    ev.value=Math.floor(Math.random() * 36) + 1979;
+function veletlen() {
+    ev.value = Math.floor(Math.random() * 36) + 1979;
+    frissit();
 }
